@@ -1,102 +1,44 @@
-
-// How to access element in the dom
-// Using ID's
-let bodyElement = document.getElementById('container');
+//accessing the body element by id
+let bodyElement = document.getElementById("container");
 console.log(bodyElement);
 
-let everyoneElement = document.getElementById('everyone');
-// console.log(everyoneElement);
+let everyoneElement = document.getElementById("everyone");
+console.log(everyoneElement);
 
+// accessing element using query selector
+let container = document.querySelector("#container");
+// console.log(container)
 
-// accessing using query selector
+let helloDiv = document.querySelector(".hello");
+// console.log(helloDiv);
 
-let container = document.querySelector('#container');
+// access elements by class name
+let helloByClassName = document.getElementsByClassName("hello");
+console.log(helloByClassName);
 
-// console.log(container);
+let helloByClassName2 = document.querySelectorAll(".hello");
+console.log(helloByClassName2);
 
-// access element by classname
-let classEveryOne = document.getElementsByClassName('everyone');
-console.log(classEveryOne);
+// access elements by tag name
+let buttonElement = document.getElementsByTagName("button");
+console.log(buttonElement);
 
+// DOM Manipulation
+let divElements = document.getElementsByTagName("div");
+console.log(divElements);
 
-// access element by tag name
+let firstDiv = divElements[0];
+console.log(firstDiv);
+firstDiv.innerHTML = "<p>Good morning Stutern learners!</p>";
 
-// DOM manipulation
+let secondDiv = divElements[1];
+secondDiv.innerText = "I hope you all are enjoying JavaScript!";
 
-let helloElements = 
-document.getElementsByTagName('div')[2];
-console.log(helloElements);
-helloElements.innerHTML = <p>'What is your name'</p>;
+firstDiv.style.color = "green";
+firstDiv.style.backgroundColor = "red";
+firstDiv.style["background-color"] = "pink";
 
-// Apply style
-helloElements.style.color = 'blue';
-helloElements.style.background = 'red';
+firstDiv.style.fontSize = "60px";
 
-
-// Create element
-let paragraphEement = document.createElement("p");
-paragraphEement.innerText = "We are celebrating international womens day today";
-
-// Appending or adding an element into an Html document
-let body = document.getElementById("element-creation");
-
-
-body.appendChild(paragraphEement);
-
-// Removing an element
-//1. get the element you want to remove
-let questionElem = document.querySelector("#question");
-//2. get the parent element (see body above)
-body.removeChild(questionElem);
-
-
-// Changing multipe elements
-// let holidays = document.querySelectorAll("li");
-// let holidays = document.querySelectorAll(".holiday");
-
-// for (let i =   0; i < holidays.length; i++) {
-//     holidays[i].style.color = "red";
-//     holidays[1].style.backgroundColor = "blue";
-// }
-
-
-// Events are sent to notify code of interesting things that have taken place
-// Ading an event listener / event handler
-// let wishButton = document.getElementById("wish-button");
-
-// method 2
-// wishButton.onclick = function() {
-//     alert("Happy International Women/'s Day");
-// }
-
-// method 3 and most preferred 
-// wishButton.addEventListener("click", function() {
-//     alert(" Wishing you a Happy International Women/'s Day");
-// });
-
-// // remove event listener
-// let removeEventButton = document.getElementById("remove-event-button");
-
-// removeEventButton.addEventListener("click", function() {
-//     wishButton.removeEventListener("click", alertMessage);
-//     alert("Removed event")
-// });
-
-// Accessing the value of what has been clicked on
-
-// for (let i = 0; i < holidays.length; i++) {
-//     holidays[i].addEventListener("click", function(event) {
-//         alert("Holiday clicked on is " + event.target.innerText)
-//     });
-// }
-
-// problem statement
-
-// local storage allows you store info in brouwser and allows you to access the info
-//mozilla developer doc
-// event bubbling and capturing
-
-
-
-// 
-
+let stuternDiv = document.getElementById("stutern");
+stuternDiv.style.color = "green";
